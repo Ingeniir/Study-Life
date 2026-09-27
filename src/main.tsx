@@ -1,9 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import { AppProviders } from "@/app/providers/AppProviders";
+import { AppRouter } from "@/app/router/AppRouter";
+
+import "@/index.css";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
+  </StrictMode>,
 );
