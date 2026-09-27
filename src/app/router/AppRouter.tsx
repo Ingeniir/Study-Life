@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { AppLayout } from "@/app/layouts/AppLayout";
 import { AssignmentsPage } from "@/features/assignments/pages/AssignmentsPage";

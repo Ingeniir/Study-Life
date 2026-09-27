@@ -1,19 +1,18 @@
 import {
-    BarChart3,
-    CalendarDays,
-    CheckSquare,
-    Clock3,
-    GraduationCap,
-    LayoutDashboard,
-    Settings,
+  BarChart3,
+  CalendarDays,
+  CheckSquare,
+  Clock3,
+  GraduationCap,
+  LayoutDashboard,
+  Settings,
 } from "lucide-react";
-import type { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export type Navigation = {
-    label: string;
-    path: string;
-    icon: any;
+  label: string;
+  path: string;
+  icon: any;
 }[];
 
 const navigation = [
@@ -52,13 +51,11 @@ const navigation = [
 export function AppLayout() {
   return (
     <div className="flex min-h-screen bg-zinc-50 text-zinc-950">
-      <aside className="h-screen flex flex-col justify-between w-64 border-r border-zinc-200 bg-white p-4">
+      <aside className="flex h-screen w-64 flex-col justify-between border-r border-zinc-200 bg-white p-4">
         <div>
           <div className="mb-8">
             <p className="text-xl font-bold">Study Live</p>
-            <p className="text-sm text-zinc-500">
-              Organise ta vie étudiante
-            </p>
+            <p className="text-sm text-zinc-500">Organise ta vie étudiante</p>
           </div>
 
           <nav className="space-y-1">
@@ -82,17 +79,17 @@ export function AppLayout() {
             ))}
           </nav>
         </div>
-        <div className="w-full flex items-center gap-2 border-t pt-1">
+        <div className="flex w-full items-center gap-2 border-t pt-1">
           <NavLink
             key="/settings"
             to="/settings"
             className={({ isActive }) =>
-            [
-              "rounded-full p-2",
-              isActive
-                ? "bg-zinc-900 text-white"
-                : "text-zinc-600 hover:bg-zinc-100"
-            ].join(" ")
+              [
+                "rounded-full p-2",
+                isActive
+                  ? "bg-zinc-900 text-white"
+                  : "text-zinc-600 hover:bg-zinc-100",
+              ].join(" ")
             }
           >
             <Settings className="size-4" />
